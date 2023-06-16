@@ -3,7 +3,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('cursos-prouni.csv', sep=',', encoding = 'utf-8')
+url = 'https://raw.githubusercontent.com/DiegoOliveira01/NF3-BIG-DATA-DiegoOliveiraDaFonte/main/cursos-prouni.csv'
+
+df = pd.read_csv(url, sep=',', encoding = 'utf-8')
 df_filtrado = df[['grau', 'nota_integral_cotas']]
 
 media_notas_cotas = df_filtrado.groupby('grau')['nota_integral_cotas'].mean()

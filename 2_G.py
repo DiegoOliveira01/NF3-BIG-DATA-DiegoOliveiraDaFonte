@@ -2,7 +2,9 @@
 
 import pandas as pd
 
-df = pd.read_csv('cursos-prouni.csv', sep=',', encoding = 'utf-8')
+url = 'https://raw.githubusercontent.com/DiegoOliveira01/NF3-BIG-DATA-DiegoOliveiraDaFonte/main/cursos-prouni.csv'
+
+df = pd.read_csv(url, sep=',', encoding = 'utf-8')
 
 df_medicina = df[df['curso_busca'] == 'Medicina']
 
