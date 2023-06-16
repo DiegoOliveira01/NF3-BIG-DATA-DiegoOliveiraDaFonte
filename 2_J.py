@@ -1,6 +1,7 @@
 # J. Gráfico comparativo entre o grau dos cursos (Bacharelado, Licenciatura, Tecnologia, etc) pelas Notas Integral de Cotas.
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('cursos-prouni.csv', sep=',', encoding = 'utf-8')
 df_filtrado = df[['grau', 'nota_integral_cotas']]
